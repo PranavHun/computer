@@ -34,6 +34,7 @@ void dec_to_binary(uint8_t dec, bool *binary) {
 
 void binary_to_dec(bool *binary, bool carry, uint16_t *dec) {
   uint16_t two_power = 1;
+  *dec = 0;
   for (int i = 0; i < 8; i++) {
     *dec += binary[7 - i] * two_power;
     two_power *= 2;
