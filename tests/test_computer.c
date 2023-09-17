@@ -44,7 +44,7 @@ void binary_to_dec(bool *binary, bool carry, uint16_t *dec) {
 
 int test_alu(bool f0, bool f1, uint8_t A, uint8_t B, uint16_t test_output) {
   uint16_t output;
-  bool A_binary[8], B_binary[8], Output_binary[9], carry;
+  bool A_binary[8], B_binary[8], Output_binary[9], carry=false;
   dec_to_binary(A, A_binary);
   dec_to_binary(B, B_binary);
   alu(f0, f1, A_binary, B_binary, Output_binary, &carry);
